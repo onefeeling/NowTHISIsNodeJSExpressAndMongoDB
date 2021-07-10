@@ -41,6 +41,7 @@ campsiteRouter.route('/')
     .catch(err => next(err));
 });
 
+//campsiteId
 campsiteRouter.route('/:campsiteId')
 .options(cors.corsWithOptions, (req, res) => res.sendStatus(200))
 .get(cors.cors, (req, res, next) => {
@@ -78,6 +79,7 @@ campsiteRouter.route('/:campsiteId')
     .catch(err => next(err));
 });
 
+//campsiteId/comments
 campsiteRouter.route('/:campsiteId/comments')
 .options(cors.corsWithOptions, (req, res) => res.sendStatus(200))
 .get(cors.cors, (req, res, next) => {
@@ -144,6 +146,7 @@ campsiteRouter.route('/:campsiteId/comments')
     .catch(err => next(err));
 });
 
+//comments/commentId
 campsiteRouter.route('/:campsiteId/comments/:commentId')
 .options(cors.corsWithOptions, (req, res) => res.sendStatus(200))
 .get(cors.cors, (req, res, next) => {
